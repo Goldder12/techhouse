@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3002";
+const BASE_URL = "http://localhost:5501";
 
 const navLinks = document.querySelectorAll(".nav-link[data-section]");
 const sections = document.querySelectorAll(".section");
@@ -264,14 +264,6 @@ document
       btn.textContent = "Yes, Delete";
     }
   });
-
-// ── TODO: implement your 5 fetch requests ─────────────
-//   loadProducts()            → GET    /api/products
-//   onCreateProduct(data)     → POST   /api/products
-//   onUpdateProduct(id, data) → PUT    /api/products/:id
-//   onDeleteProduct(id)       → DELETE /api/products/:id
-//   GET /api/products/:id     → use inside openEditModal if needed
-
 async function onCreateProduct(data) {
   const response = await fetch(BASE_URL + "/api/products", {
     method: "POST",

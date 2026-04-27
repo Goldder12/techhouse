@@ -42,17 +42,7 @@ async function register() {
       alert("All fields are required");
       return
     }
-    // fetch("http://localhost:3002/api/auth/register",{
-    //   method: "POST",
-    //   "Content-Type":"application/json",
-    //   body: JSON.stringify({
-    //     username:usernameInput.value.trim(),
-    //     email:emailInput.value.trim(),
-    //     password:passwordInput.value.trim()
-    //   })
-    // }).then(response=>response.json()).
-    // then(data=>console.log(data)).catch(err=>alert(err.message));
-    const response = await fetch("http://localhost:3002/api/auth/register",{
+    const response = await fetch("http://localhost:5501/api/auth/register",{
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
@@ -82,17 +72,7 @@ async function login() {
       alert("All fields are required");
       return
     }
-    // fetch("http://localhost:3002/api/auth/register",{
-    //   method: "POST",
-    //   "Content-Type":"application/json",
-    //   body: JSON.stringify({
-    //     username:usernameInput.value.trim(),
-    //     email:emailInput.value.trim(),
-    //     password:passwordInput.value.trim()
-    //   })
-    // }).then(response=>response.json()).
-    // then(data=>console.log(data)).catch(err=>alert(err.message));
-    const response = await fetch("http://localhost:3002/api/auth/login",{
+    const response = await fetch("http://localhost:5501/api/auth/login",{
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({

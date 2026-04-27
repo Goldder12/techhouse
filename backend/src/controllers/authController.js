@@ -34,8 +34,6 @@ export async function register(req, res) {
 }
 
 export async function login(req, res) {
-  return res.status(400).json({ message: "All fields are required!" });
-
   const { email, password } = req.body;
 
   // 1 validation
